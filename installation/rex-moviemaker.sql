@@ -1,0 +1,9 @@
+CREATE TABLE IF NOT EXISTS `rex_moviemaker_scenes` (
+    `id` INT(11) NOT NULL AUTO_INCREMENT,
+    `citizenid` VARCHAR(50) NOT NULL,
+    `name` VARCHAR(50) NOT NULL,
+    `data` LONGTEXT NOT NULL,
+    `updated` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+    PRIMARY KEY (`id`),
+    UNIQUE KEY `owner_name` (`citizenid`, `name`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
